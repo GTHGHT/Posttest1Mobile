@@ -12,6 +12,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //Costum AppBar Yang Ada Di component/pastel_appbar.dart
       appBar: PastelAppBar(
         child: Text(
           "Posttest 1 Gilang Raditya",
@@ -21,6 +22,7 @@ class MainPage extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
+          // Memberi warna gradient pada container
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -30,6 +32,7 @@ class MainPage extends StatelessWidget {
             ],
           ),
         ),
+        // Mengecek jika lebar layar termasuk vertikal atau horizontal
         child: MediaQuery.of(context).size.width > 600
             ? buildHorizontal(context)
             : buildVertical(context),
@@ -37,6 +40,7 @@ class MainPage extends StatelessWidget {
     );
   }
 
+  // Widget Tree Jika Orientasi Layar Vertical
   Widget buildVertical(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,11 +88,13 @@ class MainPage extends StatelessWidget {
     );
   }
 
+  // Widget Tree Jika Orientasi Layar Horizontal
   Widget buildHorizontal(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        // Column berisi logo dan title
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -104,6 +110,7 @@ class MainPage extends StatelessWidget {
             const Text('Minesweeper', style: kAppTitleTextStyle),
           ],
         ),
+        // Column berisi button start dan credits
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -119,7 +126,6 @@ class MainPage extends StatelessWidget {
                       content: Text('Start Button Pressed'),
                     ),
                   );
-                  print(MediaQuery.of(context).size.width);
                 },
               ),
             ),

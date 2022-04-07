@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PastelButton extends StatelessWidget {
+  // Property Warna Button
   final Color color;
   final Widget child;
   final VoidCallback? onPressed;
@@ -18,6 +19,7 @@ class PastelButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // Shape Decoration untuk memberi efek "Shadow" pada button
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -30,6 +32,7 @@ class PastelButton extends StatelessWidget {
           ),
         ],
       ),
+      // RawMaterialButton agar bisa diakses property elevation
       child: RawMaterialButton(
         constraints: constraints,
         elevation: 0,

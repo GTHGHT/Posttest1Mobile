@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PastelAppBar extends StatelessWidget implements PreferredSizeWidget {
+  // Property untuk anak dari Appbar
   final Widget? child;
 
   const PastelAppBar({this.child});
@@ -11,6 +12,7 @@ class PastelAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.white,
       title: child,
+      // Mengecek apakah perlu ditampilkan back button pada appbar
       leading: Navigator.canPop(context)
           ? IconButton(
               icon: Icon(

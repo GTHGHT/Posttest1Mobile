@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// style text judul aplikasi
 const kAppTitleTextStyle = TextStyle(
   color: Colors.black,
   fontSize: 48,
@@ -7,6 +8,7 @@ const kAppTitleTextStyle = TextStyle(
   fontFamily: "Montserrat",
 );
 
+// style text judul appbar
 const kAppBarTextStyle = TextStyle(
   fontFamily: "Montserrat",
   fontSize: 28,
@@ -14,13 +16,7 @@ const kAppBarTextStyle = TextStyle(
   color: Colors.black,
 );
 
-const kPastelButtonTextStyle = TextStyle(
-  fontSize: 24,
-  fontWeight: FontWeight.bold,
-  fontFamily: "Lato",
-  color: Colors.black,
-);
-
+// style text title button
 const kTitleButtonTextStyle = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.bold,
